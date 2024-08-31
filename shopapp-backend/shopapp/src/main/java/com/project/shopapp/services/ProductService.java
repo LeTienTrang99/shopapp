@@ -46,7 +46,7 @@ public class ProductService implements IProductService{
     public Product getProductById(long productId) throws Exception {
         return productRepository.findById(productId).
                 orElseThrow(()-> new DataNotFoundException(
-                        "Cannot find product with id ="+productId));
+                        "Cannot find product with id = "+productId));
     }
 
     @Override
